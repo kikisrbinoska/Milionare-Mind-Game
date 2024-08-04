@@ -12,9 +12,15 @@ namespace Milionare_Mind_Game
 {
     public partial class LeaderboardForm : Form
     {
-        public LeaderboardForm()
+        public LeaderboardForm(List<Player> players)
         {
             InitializeComponent();
+            LoadLeaderboard(players);
+        }
+        private void LoadLeaderboard(List<Player> players)
+        {
+            // Assuming you have a DataGridView named dataGridView1
+            dataGridView1.DataSource = players.OrderByDescending(p => p.Score).ToList();
         }
     }
 }
