@@ -188,7 +188,7 @@ namespace Milionare_Mind_Game
                 q2.Text = "B) Kill Bill";
                 q3.Text = "C) Flowers";
                 q4.Text = "D) Blinding Lights";
-                q3.FillColor = Color.Sla;
+                q3.FillColor = Color.SlateBlue;
             }
             if (panel10.BackColor == Color.DarkOrange)
             {
