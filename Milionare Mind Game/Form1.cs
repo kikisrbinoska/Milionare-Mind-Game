@@ -439,6 +439,61 @@ namespace Milionare_Mind_Game
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+            string correctAnswer = GetCorrectAnswer(label1.Text);
+
+
+            List<Guna.UI2.WinForms.Guna2CircleButton> answerButtons = new List<Guna.UI2.WinForms.Guna2CircleButton>
+    {
+        (Guna.UI2.WinForms.Guna2CircleButton)this.Controls.Find("q1", true).FirstOrDefault(),
+        (Guna.UI2.WinForms.Guna2CircleButton)this.Controls.Find("q2", true).FirstOrDefault(),
+        (Guna.UI2.WinForms.Guna2CircleButton)this.Controls.Find("q3", true).FirstOrDefault(),
+        (Guna.UI2.WinForms.Guna2CircleButton)this.Controls.Find("q4", true).FirstOrDefault()
+    };
+
+
+            Random rnd = new Random();
+            answerButtons = answerButtons.OrderBy(x => rnd.Next()).ToList();
+
+
+            answerButtons.Where(button => button != null && button.Text != correctAnswer)
+                         .Take(2)
+                         .ToList()
+                         .ForEach(button => button.Text = "");
+
+
+            pictureBox3.Visible = false;
+        }
+        private string GetCorrectAnswer(string questionNumber)
+        {
+            switch (questionNumber)
+            {
+                case "1":
+                    return "B) Алберт Ајнштајн";
+                case "2":
+                    return "A) Коко Шанел";
+                case "3":
+                    return "B) Лионел Меси";
+                case "4":
+                    return "A) Паразит";
+                case "5":
+                    return "B) Бил Гејтс";
+                case "6":
+                    return "D) Џејн Остин";
+                case "7":
+                    return "A) Почеток на Француската револуција";
+                case "8":
+                    return "D) Фрида Џанини";
+                case "9":
+                    return "A) Хиероглифи";
+                case "10":
+                    return "C) Flowers";
+                case "11":
+                    return "B) Лудвиг ван Бетовен";
+                case "12":
+                    return "A) Netscape Navigator";
+                default:
+                    return "";
+            }
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
