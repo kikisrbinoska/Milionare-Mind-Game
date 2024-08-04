@@ -433,7 +433,7 @@ namespace Milionare_Mind_Game
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-           
+            panel14.Visible = true;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -461,6 +461,42 @@ namespace Milionare_Mind_Game
             panelPlayer.Visible = false;
             pictureBox1.Visible = false;
             label30.Visible = false;
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+
+
+            int percentage1 = random.Next(0, 101);
+            int percentage2 = random.Next(0, 101 - percentage1);
+            int percentage3 = random.Next(0, 101 - percentage1 - percentage2);
+            int percentage4 = 100 - percentage1 - percentage2 - percentage3;
+
+
+            if (percentage4 < 0)
+            {
+
+                percentage3 += percentage4;
+                percentage4 = 0;
+            }
+
+
+            progressBar1.Value = percentage1;
+            progressBar2.Value = percentage2;
+            progressBar3.Value = percentage3;
+            progressBar4.Value = percentage4;
+
+            label37.Text = $"{percentage1}%";
+            label38.Text = $"{percentage2}%";
+            label39.Text = $"{percentage3}%";
+            label40.Text = $"{percentage4}%";
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+            panel14.Visible = false;
+            pictureBox2.Visible = false;
         }
     }
 }
