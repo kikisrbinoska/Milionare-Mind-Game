@@ -289,7 +289,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::Milionare_Mind_Game.Properties.Resources.freepik_br_c265096a_30ff_42e2_bbb0_c0f532df2319;
-            this.pictureBox4.Location = new System.Drawing.Point(350, 40);
+            this.pictureBox4.Location = new System.Drawing.Point(350, 27);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(219, 183);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1049,9 +1049,8 @@
             this.timerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerLabel.Location = new System.Drawing.Point(1024, 334);
             this.timerLabel.Name = "timerLabel";
-            this.timerLabel.Size = new System.Drawing.Size(49, 29);
+            this.timerLabel.Size = new System.Drawing.Size(0, 29);
             this.timerLabel.TabIndex = 23;
-            this.timerLabel.Text = "sss";
             // 
             // label30
             // 
