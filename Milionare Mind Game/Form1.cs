@@ -53,8 +53,23 @@ namespace Milionare_Mind_Game
             int score = totalPoints;
             //UpdateLeaderboard(playerName, score);
             //ShowLeaderboard();
-            //ResetGameState();
+            ResetGameState();
             this.Close();
+        }
+        private void ResetGameState()
+        {
+            panel1.BackColor = Color.Transparent;
+            panel2.BackColor = Color.Transparent;
+            panel3.BackColor = Color.Transparent;
+            panel4.BackColor = Color.Transparent;
+            panel5.BackColor = Color.Transparent;
+            panel6.BackColor = Color.Transparent;
+            panel7.BackColor = Color.Transparent;
+            panel8.BackColor = Color.Transparent;
+            panel9.BackColor = Color.Transparent;
+            panel10.BackColor = Color.Transparent;
+            panel11.BackColor = Color.Transparent;
+            panel12.BackColor = Color.Transparent;
         }
 
     }
