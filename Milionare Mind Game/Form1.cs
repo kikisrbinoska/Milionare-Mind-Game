@@ -18,6 +18,8 @@ namespace Milionare_Mind_Game
         private Timer timer;
         private int remainingTime;
         private int totalPoints = 0;
+        private OpenFileDialog openFileDialog;
+        private List<Player> leaderboard = new List<Player>();
 
         public Form1()
         {
@@ -552,6 +554,18 @@ namespace Milionare_Mind_Game
         {
             panel14.Visible = false;
             pictureBox2.Visible = false;
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            ShowLeaderboard();
+        }
+        private void ShowLeaderboard()
+        {
+            using (LeaderboardForm leaderboardForm = new LeaderboardForm(leaderboard))
+            {
+                leaderboardForm.ShowDialog();
+            }
         }
     }
 }
