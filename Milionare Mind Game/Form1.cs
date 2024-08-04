@@ -587,5 +587,24 @@ namespace Milionare_Mind_Game
                 leaderboard = JsonConvert.DeserializeObject<List<Player>>(json) ?? new List<Player>();
             }
         }
+
+        private void ShowPlayerSetupForm_Click(object sender, EventArgs e)
+        {
+            using (PlayerSetupForm playerSetupForm = new PlayerSetupForm())
+            {
+                if (playerSetupForm.ShowDialog() == DialogResult.OK)
+                {
+
+                    string playerName = playerSetupForm.PlayerName;
+                    Image playerPhoto = playerSetupForm.PlayerPhoto;
+
+
+                    guna2Button1.Text = playerName;
+                    pictureBox4.Image = playerPhoto;
+                }
+            }
+            pictureBox4.Visible = true;
+            guna2Button1.Visible = true;
+        }
     }
 }
