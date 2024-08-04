@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+using WMPLib;
+using System.IO;
 
 namespace Milionare_Mind_Game
 {
@@ -276,6 +279,37 @@ namespace Milionare_Mind_Game
             remainingTime = 60;
             timerLabel.Text = $"{remainingTime} секунди ";
             timer.Start();
+        }
+
+        private void q1_Click(object sender, EventArgs e)
+        {
+            if (label1.Text == "2" || label1.Text == "4" || label1.Text == "7" || label1.Text == "9" || label1.Text == "12")
+            {
+                q1.FillColor = Color.DarkGreen;
+                WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
+                windowsMediaPlayer.URL = "correct.wav";
+                windowsMediaPlayer.controls.play();
+
+               // AnimateControl(q1, Color.DarkGreen);
+            }
+            else
+            {
+                q1.FillColor = Color.DarkRed;
+                MessageBox.Show("Не го освои милионот...");
+                WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
+                windowsMediaPlayer.URL = "incorrect.wav";
+                windowsMediaPlayer.controls.play();
+               // AnimateControl(q1, Color.DarkRed);
+                EndGame();
+            }
+            if (q1.FillColor == Color.DarkGreen && label1.Text == "12")
+            {
+                MessageBox.Show("ТИ СИ МИЛИОНЕР!!!");
+                WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
+                windowsMediaPlayer.URL = "milionerce.mp3";
+                windowsMediaPlayer.controls.play();
+                EndGame();
+            }
         }
     }
 }
