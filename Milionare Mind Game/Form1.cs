@@ -338,7 +338,7 @@ namespace Milionare_Mind_Game
                 windowsMediaPlayer.URL = "correct.wav";
                 windowsMediaPlayer.controls.play();
 
-               // AnimateControl(q1, Color.DarkGreen);
+                AnimateControl(q1, Color.DarkGreen);
             }
             else
             {
@@ -347,7 +347,7 @@ namespace Milionare_Mind_Game
                 WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
                 windowsMediaPlayer.URL = "incorrect.wav";
                 windowsMediaPlayer.controls.play();
-               // AnimateControl(q1, Color.DarkRed);
+                AnimateControl(q1, Color.DarkRed);
                 EndGame();
             }
             if (q1.FillColor == Color.DarkGreen && label1.Text == "12")
@@ -368,6 +368,7 @@ namespace Milionare_Mind_Game
                 WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
                 windowsMediaPlayer.URL = "correct.wav";
                 windowsMediaPlayer.controls.play();
+                AnimateControl(q1, Color.DarkGreen);
             }
             else
             {
@@ -376,6 +377,7 @@ namespace Milionare_Mind_Game
                 WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
                 windowsMediaPlayer.URL = "incorrect.wav";
                 windowsMediaPlayer.controls.play();
+                AnimateControl(q1, Color.DarkRed);
                 EndGame();
             }
 
@@ -389,6 +391,7 @@ namespace Milionare_Mind_Game
                 WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
                 windowsMediaPlayer.URL = "correct.wav";
                 windowsMediaPlayer.controls.play();
+                AnimateControl(q1, Color.DarkGreen);
             }
             else
             {
@@ -397,6 +400,7 @@ namespace Milionare_Mind_Game
                 WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
                 windowsMediaPlayer.URL = "incorrect.wav";
                 windowsMediaPlayer.controls.play();
+                AnimateControl(q1, Color.DarkRed);
                 EndGame();
             }
         }
@@ -408,6 +412,7 @@ namespace Milionare_Mind_Game
                 q4.FillColor = Color.DarkGreen;
                 WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
                 windowsMediaPlayer.URL = "incorrect.wav";
+                AnimateControl(q1, Color.DarkGreen);
             }
             else
             {
@@ -416,8 +421,46 @@ namespace Milionare_Mind_Game
                 WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
                 windowsMediaPlayer.URL = "incorrect.wav";
                 windowsMediaPlayer.controls.play();
+                AnimateControl(q1, Color.DarkRed);
                 EndGame();
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            panelPlayer.Visible = true;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            label30.Text = "Се мислам помеѓу А и Б";
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            label30.Text = "Сигурен сум дека одговорот е под А";
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            label30.Text = "Здраво, што ти треба пак денес?";
+        }
+
+        private void label31_Click(object sender, EventArgs e)
+        {
+            panelPlayer.Visible = false;
+            pictureBox1.Visible = false;
+            label30.Visible = false;
         }
     }
 }
