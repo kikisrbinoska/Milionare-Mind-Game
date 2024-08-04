@@ -579,5 +579,13 @@ namespace Milionare_Mind_Game
             string json = JsonConvert.SerializeObject(leaderboard);
             File.WriteAllText("leaderboard.json", json);
         }
+        private void LoadLeaderboard()
+        {
+            if (File.Exists("leaderboard.json"))
+            {
+                string json = File.ReadAllText("leaderboard.json");
+                leaderboard = JsonConvert.DeserializeObject<List<Player>>(json) ?? new List<Player>();
+            }
+        }
     }
 }
