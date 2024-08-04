@@ -280,7 +280,55 @@ namespace Milionare_Mind_Game
             timerLabel.Text = $"{remainingTime} секунди ";
             timer.Start();
         }
+        private Dictionary<Control, Timer> ongoingAnimations = new Dictionary<Control, Timer>();
+        private void AnimateControl(Control control, Color blinkColor)
+        {
 
+            if (ongoingAnimations.ContainsKey(control))
+            {
+                var existingTimer = ongoingAnimations[control];
+                existingTimer.Stop();
+                existingTimer.Dispose();
+                ongoingAnimations.Remove(control);
+            }
+
+
+            Color originalColor = control.BackColor;
+            int blinkCount = 0;
+            int maxBlinks = 6;
+
+
+            Timer timer = new Timer();
+            timer.Interval = 200;
+
+            timer.Tick += (s, e) =>
+            {
+                blinkCount++;
+                if (blinkCount % 2 == 0)
+                {
+
+                    control.BackColor = blinkColor;
+                }
+                else
+                {
+
+                    control.BackColor = originalColor;
+                }
+
+                if (blinkCount >= maxBlinks)
+                {
+                    timer.Stop();
+                    timer.Dispose();
+                    ongoingAnimations.Remove(control);
+
+                    control.BackColor = originalColor;
+                }
+            };
+
+
+            timer.Start();
+            ongoingAnimations[control] = timer;
+        }
         private void q1_Click(object sender, EventArgs e)
         {
             if (label1.Text == "2" || label1.Text == "4" || label1.Text == "7" || label1.Text == "9" || label1.Text == "12")
