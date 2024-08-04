@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Media;
 using WMPLib;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace Milionare_Mind_Game
 {
@@ -566,6 +567,17 @@ namespace Milionare_Mind_Game
             {
                 leaderboardForm.ShowDialog();
             }
+        }
+        private void UpdateLeaderboard(string playerName, int score)
+        {
+            leaderboard.Add(new Player(playerName, score));
+            leaderboard = leaderboard.OrderByDescending(p => p.Score).ToList();
+            SaveLeaderboard();
+        }
+        private void SaveLeaderboard()
+        {
+            string json = JsonConvert.SerializeObject(leaderboard);
+            File.WriteAllText("leaderboard.json", json);
         }
     }
 }
