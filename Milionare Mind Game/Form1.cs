@@ -352,5 +352,24 @@ namespace Milionare_Mind_Game
                 EndGame();
             }
         }
+
+        private void q4_Click(object sender, EventArgs e)
+        {
+            if (label1.Text == "8" || label1.Text == "6")
+            {
+                q4.FillColor = Color.DarkGreen;
+                WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
+                windowsMediaPlayer.URL = "incorrect.wav";
+            }
+            else
+            {
+                q4.FillColor = Color.DarkRed;
+                MessageBox.Show("Не го освои милионот...");
+                WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
+                windowsMediaPlayer.URL = "incorrect.wav";
+                windowsMediaPlayer.controls.play();
+                EndGame();
+            }
+        }
     }
 }
