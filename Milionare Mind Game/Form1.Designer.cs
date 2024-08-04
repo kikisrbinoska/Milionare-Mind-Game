@@ -104,6 +104,7 @@
             this.label25 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerLabel = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelPlayer.SuspendLayout();
@@ -176,6 +177,7 @@
             this.q1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.q1.Size = new System.Drawing.Size(401, 96);
             this.q1.TabIndex = 2;
+            this.q1.Click += new System.EventHandler(this.q1_Click);
             // 
             // q2
             // 
@@ -192,6 +194,7 @@
             this.q2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.q2.Size = new System.Drawing.Size(401, 96);
             this.q2.TabIndex = 3;
+            this.q2.Click += new System.EventHandler(this.q2_Click);
             // 
             // q3
             // 
@@ -208,6 +211,7 @@
             this.q3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.q3.Size = new System.Drawing.Size(401, 96);
             this.q3.TabIndex = 4;
+            this.q3.Click += new System.EventHandler(this.q3_Click);
             // 
             // q4
             // 
@@ -224,6 +228,7 @@
             this.q4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.q4.Size = new System.Drawing.Size(401, 96);
             this.q4.TabIndex = 5;
+            this.q4.Click += new System.EventHandler(this.q4_Click);
             // 
             // guna2Button6
             // 
@@ -241,6 +246,7 @@
             this.guna2Button6.Size = new System.Drawing.Size(180, 45);
             this.guna2Button6.TabIndex = 16;
             this.guna2Button6.Text = "Leaderboard";
+            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
             // ShowPlayerSetupForm
             // 
@@ -258,6 +264,7 @@
             this.ShowPlayerSetupForm.Size = new System.Drawing.Size(180, 45);
             this.ShowPlayerSetupForm.TabIndex = 17;
             this.ShowPlayerSetupForm.Text = "Нов играч";
+            this.ShowPlayerSetupForm.Click += new System.EventHandler(this.ShowPlayerSetupForm_Click);
             // 
             // guna2Button1
             // 
@@ -276,10 +283,12 @@
             this.guna2Button1.TabIndex = 18;
             this.guna2Button1.Text = "Kiki";
             this.guna2Button1.Visible = false;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::Milionare_Mind_Game.Properties.Resources.freepik_br_c265096a_30ff_42e2_bbb0_c0f532df2319;
             this.pictureBox4.Location = new System.Drawing.Point(350, 40);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(219, 183);
@@ -310,6 +319,7 @@
             this.label31.TabIndex = 4;
             this.label31.Text = "<<<";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label31.Click += new System.EventHandler(this.label31_Click);
             // 
             // guna2Button4
             // 
@@ -327,6 +337,7 @@
             this.guna2Button4.Size = new System.Drawing.Size(167, 44);
             this.guna2Button4.TabIndex = 2;
             this.guna2Button4.Text = "Giulia";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Button3
             // 
@@ -344,6 +355,7 @@
             this.guna2Button3.Size = new System.Drawing.Size(167, 44);
             this.guna2Button3.TabIndex = 1;
             this.guna2Button3.Text = "Marco ";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button2
             // 
@@ -362,6 +374,7 @@
             this.guna2Button2.Size = new System.Drawing.Size(167, 47);
             this.guna2Button2.TabIndex = 0;
             this.guna2Button2.Text = "Alessandra";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // panel14
             // 
@@ -395,6 +408,7 @@
             this.label32.Size = new System.Drawing.Size(36, 20);
             this.label32.TabIndex = 10;
             this.label32.Text = "<<<";
+            this.label32.Click += new System.EventHandler(this.label32_Click);
             // 
             // guna2Button5
             // 
@@ -412,6 +426,7 @@
             this.guna2Button5.Size = new System.Drawing.Size(167, 35);
             this.guna2Button5.TabIndex = 5;
             this.guna2Button5.Text = "Прашај";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // label40
             // 
@@ -567,6 +582,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 44;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -577,6 +593,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 43;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -587,6 +604,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 42;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel12
             // 
@@ -1035,6 +1053,16 @@
             this.timerLabel.TabIndex = 23;
             this.timerLabel.Text = "sss";
             // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Indigo;
+            this.label30.Location = new System.Drawing.Point(662, 280);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(0, 20);
+            this.label30.TabIndex = 24;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1042,6 +1070,7 @@
             this.BackgroundImage = global::Milionare_Mind_Game.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1818, 939);
+            this.Controls.Add(this.label30);
             this.Controls.Add(this.timerLabel);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.panel14);
@@ -1176,6 +1205,7 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label timerLabel;
+        private System.Windows.Forms.Label label30;
     }
 }
 

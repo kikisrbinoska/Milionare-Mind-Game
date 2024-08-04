@@ -36,6 +36,9 @@
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -58,10 +61,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LeaderboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaderboardForm.Designer.cs">
+      <DependentUpon>LeaderboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayerSetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerSetupForm.Designer.cs">
+      <DependentUpon>PlayerSetupForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaderboardForm.resx">
+      <DependentUpon>LeaderboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerSetupForm.resx">
+      <DependentUpon>PlayerSetupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,6 +120,26 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\freepik_br_faaaccee-083d-4b90-bea8-6eeec2be9865.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\freepik_br_c265096a-30ff-42e2-bbb0-c0f532df2319.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\milionerce.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
