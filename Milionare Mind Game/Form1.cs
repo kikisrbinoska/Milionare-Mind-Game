@@ -14,7 +14,8 @@ namespace Milionare_Mind_Game
     {
         private Timer timer;
         private int remainingTime;
-  
+        private int totalPoints = 0;
+
         public Form1()
         {
             InitializeComponent();
@@ -43,8 +44,18 @@ namespace Milionare_Mind_Game
             {
                 timerLabel.Text = "Времето заврши!!!";
                 timer.Stop();
-                //EndGame();
+                EndGame();
             }
         }
+        private void EndGame()
+        {
+            string playerName = guna2Button1.Text;
+            int score = totalPoints;
+            //UpdateLeaderboard(playerName, score);
+            //ShowLeaderboard();
+            //ResetGameState();
+            this.Close();
+        }
+
     }
 }
