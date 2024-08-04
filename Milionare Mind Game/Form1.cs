@@ -21,11 +21,13 @@ namespace Milionare_Mind_Game
         private int totalPoints = 0;
         private OpenFileDialog openFileDialog;
         private List<Player> leaderboard = new List<Player>();
+        private WindowsMediaPlayer windowsMediaPlayer;
 
         public Form1()
         {
             InitializeComponent();
             InitializeTimer();
+            windowsMediaPlayer = new WindowsMediaPlayer();
         }
         private void InitializeTimer()
         {
@@ -332,12 +334,13 @@ namespace Milionare_Mind_Game
             timer.Start();
             ongoingAnimations[control] = timer;
         }
+        /*WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
         private void q1_Click(object sender, EventArgs e)
         {
             if (label1.Text == "2" || label1.Text == "4" || label1.Text == "7" || label1.Text == "9" || label1.Text == "12")
             {
                 q1.FillColor = Color.DarkGreen;
-                WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
+               
                 windowsMediaPlayer.URL = "correct.wav";
                 windowsMediaPlayer.controls.play();
 
@@ -346,19 +349,22 @@ namespace Milionare_Mind_Game
             else
             {
                 q1.FillColor = Color.DarkRed;
-                MessageBox.Show("Не го освои милионот...");
-                WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
                 windowsMediaPlayer.URL = "incorrect.wav";
                 windowsMediaPlayer.controls.play();
+                MessageBox.Show("Не го освои милионот...");
+                
+               
+          
                 AnimateControl(q1, Color.DarkRed);
                 EndGame();
             }
             if (q1.FillColor == Color.DarkGreen && label1.Text == "12")
             {
                 MessageBox.Show("ТИ СИ МИЛИОНЕР!!!");
-                WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
+                
                 windowsMediaPlayer.URL = "milionerce.mp3";
                 windowsMediaPlayer.controls.play();
+
                 EndGame();
             }
         }
@@ -368,10 +374,10 @@ namespace Milionare_Mind_Game
             if (label1.Text == "1" || label1.Text == "3" || label1.Text == "5" || label1.Text == "11")
             {
                 q2.FillColor = Color.DarkGreen;
-                WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
+              
                 windowsMediaPlayer.URL = "correct.wav";
                 windowsMediaPlayer.controls.play();
-                AnimateControl(q1, Color.DarkGreen);
+                AnimateControl(q2, Color.DarkGreen);
             }
             else
             {
@@ -380,7 +386,7 @@ namespace Milionare_Mind_Game
                 WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
                 windowsMediaPlayer.URL = "incorrect.wav";
                 windowsMediaPlayer.controls.play();
-                AnimateControl(q1, Color.DarkRed);
+                AnimateControl(q2, Color.DarkRed);
                 EndGame();
             }
 
@@ -394,7 +400,7 @@ namespace Milionare_Mind_Game
                 WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
                 windowsMediaPlayer.URL = "correct.wav";
                 windowsMediaPlayer.controls.play();
-                AnimateControl(q1, Color.DarkGreen);
+                AnimateControl(q3, Color.DarkGreen);
             }
             else
             {
@@ -403,7 +409,7 @@ namespace Milionare_Mind_Game
                 WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
                 windowsMediaPlayer.URL = "incorrect.wav";
                 windowsMediaPlayer.controls.play();
-                AnimateControl(q1, Color.DarkRed);
+                AnimateControl(q3, Color.DarkRed);
                 EndGame();
             }
         }
@@ -414,8 +420,8 @@ namespace Milionare_Mind_Game
             {
                 q4.FillColor = Color.DarkGreen;
                 WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
-                windowsMediaPlayer.URL = "incorrect.wav";
-                AnimateControl(q1, Color.DarkGreen);
+                windowsMediaPlayer.URL = "correct.wav";
+                AnimateControl(q4, Color.DarkGreen);
             }
             else
             {
@@ -424,10 +430,94 @@ namespace Milionare_Mind_Game
                 WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
                 windowsMediaPlayer.URL = "incorrect.wav";
                 windowsMediaPlayer.controls.play();
+                AnimateControl(q4, Color.DarkRed);
+                EndGame();
+            }
+        } */
+        private void q1_Click(object sender, EventArgs e)
+        {
+            if (label1.Text == "2" || label1.Text == "4" || label1.Text == "7" || label1.Text == "9" || label1.Text == "12")
+            {
+                q1.FillColor = Color.DarkGreen;
+                PlaySound("correct.wav");
+                AnimateControl(q1, Color.DarkGreen);
+            }
+            else
+            {
+                q1.FillColor = Color.DarkRed;
+                PlaySound("incorrect.wav");
+                MessageBox.Show("Не го освои милионот...");
                 AnimateControl(q1, Color.DarkRed);
                 EndGame();
             }
+            if (q1.FillColor == Color.DarkGreen && label1.Text == "12")
+            {
+                MessageBox.Show("ТИ СИ МИЛИОНЕР!!!");
+                PlaySound("milionerce.mp3");
+                EndGame();
+            }
         }
+
+        private void q2_Click(object sender, EventArgs e)
+        {
+            if (label1.Text == "1" || label1.Text == "3" || label1.Text == "5" || label1.Text == "11")
+            {
+                q2.FillColor = Color.DarkGreen;
+                PlaySound("correct.wav");
+                AnimateControl(q2, Color.DarkGreen);
+            }
+            else
+            {
+                q2.FillColor = Color.DarkRed;
+                PlaySound("incorrect.wav");
+                MessageBox.Show("Не го освои милионот...");
+                AnimateControl(q2, Color.DarkRed);
+                EndGame();
+            }
+        }
+
+        private void q3_Click(object sender, EventArgs e)
+        {
+            if (label1.Text == "10")
+            {
+                q3.FillColor = Color.DarkGreen;
+                PlaySound("correct.wav");
+                AnimateControl(q3, Color.DarkGreen);
+            }
+            else
+            {
+                q3.FillColor = Color.DarkRed;
+                PlaySound("incorrect.wav");
+                MessageBox.Show("Не го освои милионот...");
+                AnimateControl(q3, Color.DarkRed);
+                EndGame();
+            }
+        }
+
+        private void q4_Click(object sender, EventArgs e)
+        {
+            if (label1.Text == "8" || label1.Text == "6")
+            {
+                q4.FillColor = Color.DarkGreen;
+                PlaySound("correct.wav");
+                AnimateControl(q4, Color.DarkGreen);
+            }
+            else
+            {
+                q4.FillColor = Color.DarkRed;
+                PlaySound("incorrect.wav");
+                MessageBox.Show("Не го освои милионот...");
+                AnimateControl(q4, Color.DarkRed);
+                EndGame();
+            }
+        }
+
+        private void PlaySound(string fileName)
+        {
+            windowsMediaPlayer.URL = fileName;
+            windowsMediaPlayer.controls.play();
+        }
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
