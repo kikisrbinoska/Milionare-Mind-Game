@@ -1020,6 +1020,10 @@
             this.label25.TabIndex = 11;
             this.label25.Text = "1";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // timerLabel
             // 
             this.timerLabel.AutoSize = true;
