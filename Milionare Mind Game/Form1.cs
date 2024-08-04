@@ -333,5 +333,24 @@ namespace Milionare_Mind_Game
 
         }
 
+        private void q3_Click(object sender, EventArgs e)
+        {
+            if (label1.Text == "10")
+            {
+                q3.FillColor = Color.DarkGreen;
+                WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
+                windowsMediaPlayer.URL = "correct.wav";
+                windowsMediaPlayer.controls.play();
+            }
+            else
+            {
+                q3.FillColor = Color.DarkRed;
+                MessageBox.Show("Не го освои милионот...");
+                WindowsMediaPlayer windowsMediaPlayer = new WindowsMediaPlayer();
+                windowsMediaPlayer.URL = "incorrect.wav";
+                windowsMediaPlayer.controls.play();
+                EndGame();
+            }
+        }
     }
 }
