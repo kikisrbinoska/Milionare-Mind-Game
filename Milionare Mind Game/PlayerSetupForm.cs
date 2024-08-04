@@ -26,7 +26,9 @@ namespace Milionare_Mind_Game
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
-        private void guna2ButtonUploadPhoto_Click(object sender, EventArgs e)
+        
+
+        private void guna2ButtonUploadPhoto_Click_1(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -34,7 +36,7 @@ namespace Milionare_Mind_Game
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     PlayerPhoto = Image.FromFile(openFileDialog.FileName);
-                    
+
                 }
             }
         }

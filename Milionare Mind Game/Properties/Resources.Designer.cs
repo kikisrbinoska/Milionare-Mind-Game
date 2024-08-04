@@ -83,6 +83,16 @@ namespace Milionare_Mind_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap freepik_br_c265096a_30ff_42e2_bbb0_c0f532df2319 {
+            get {
+                object obj = ResourceManager.GetObject("freepik_br_c265096a-30ff-42e2-bbb0-c0f532df2319", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap freepik_br_c9fd5522_0f0a_41aa_9841_44a0eea629ac {
             get {
                 object obj = ResourceManager.GetObject("freepik_br_c9fd5522-0f0a-41aa-9841-44a0eea629ac", resourceCulture);

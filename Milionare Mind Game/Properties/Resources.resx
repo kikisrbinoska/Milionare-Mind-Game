@@ -121,13 +121,16 @@
   <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="freepik_br_c9fd5522-0f0a-41aa-9841-44a0eea629ac" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\freepik_br_c9fd5522-0f0a-41aa-9841-44a0eea629ac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="freepik_br_60ebea4a-857e-46cd-9fd5-d9f9d24cb24b" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\freepik_br_60ebea4a-857e-46cd-9fd5-d9f9d24cb24b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="freepik_br_faaaccee-083d-4b90-bea8-6eeec2be9865" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\freepik_br_faaaccee-083d-4b90-bea8-6eeec2be9865.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="freepik_br_c9fd5522-0f0a-41aa-9841-44a0eea629ac" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\freepik_br_c9fd5522-0f0a-41aa-9841-44a0eea629ac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="freepik_br_c265096a-30ff-42e2-bbb0-c0f532df2319" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\freepik_br_c265096a-30ff-42e2-bbb0-c0f532df2319.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
