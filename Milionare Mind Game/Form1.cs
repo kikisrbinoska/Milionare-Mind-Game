@@ -71,9 +71,17 @@ namespace Milionare_Mind_Game
             panel11.BackColor = Color.Transparent;
             panel12.BackColor = Color.Transparent;
         }
+        private void ResetButtonColors()
+        {
+            q1.FillColor = Color.SlateBlue;
+            q2.FillColor = Color.SlateBlue;
+            q3.FillColor = Color.SlateBlue;
+            q4.FillColor = Color.SlateBlue;
+        }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            ResetButtonColors();
             if (panel1.BackColor == Color.Transparent)
             {
                 label2.Text = " Кој е познат како таткото на модерната физика?";
